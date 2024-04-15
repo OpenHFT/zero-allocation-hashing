@@ -20,7 +20,7 @@
    <parent>
         <groupId>net.openhft</groupId>
         <artifactId>java-parent-pom</artifactId>
-        <version>1.25.4</version>
+        <version>1.26.0-SNAPSHOT</version>
         <relativePath />
     </parent>
 
@@ -332,7 +332,7 @@
         <profile>
             <id>jdk9+-profile</id>
             <activation>
-                <jdk>[9,)</jdk>
+                <jdk>[9,21)</jdk>
             </activation>
             <properties>
                 <maven.compiler.release>${project.target.release}</maven.compiler.release>
@@ -356,7 +356,39 @@
                 </plugins>
             </build>
         </profile>
-
+        <profile>
+            <id>jdk21-profile</id>
+            <activation>
+                <jdk>[21,)</jdk>
+            </activation>
+            <properties>
+                <maven.compiler.release>8</maven.compiler.release>
+            </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <configuration>
+                            <failOnWarning>false</failOnWarning>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>test-without-compact-string</id>
+                                <goals>
+                                    <goal>test</goal>
+                                </goals>
+                                <configuration>
+                                    <argLine>@{argLine} -XX:-CompactStrings ${jvm.requiredArgs}</argLine>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
         <profile>
             <id>sonar</id>
             <build>
