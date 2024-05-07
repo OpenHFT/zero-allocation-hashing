@@ -51,7 +51,6 @@ public class City64_1_1_Test {
         test(LongHashFunction.city_1_1(0L, 0L), HASHES_OF_LOOPING_BYTES_WITH_SEEDS_0_0);
     }
 
-
     public void test(LongHashFunction city, long[] hashesOfLoopingBytes) {
         byte[] data = new byte[len];
         for (int j = 0; j < data.length; j++) {

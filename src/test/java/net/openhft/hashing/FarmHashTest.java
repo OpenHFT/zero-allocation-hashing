@@ -59,5 +59,4 @@ public class FarmHashTest {
             LongHashFunctionTest.test(f, data, f.hashBytes(data));
         }
     }
-
 }

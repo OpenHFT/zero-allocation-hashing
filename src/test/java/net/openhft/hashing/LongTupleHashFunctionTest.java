@@ -158,7 +158,6 @@ public class LongTupleHashFunctionTest {
             System.arraycopy(shorts, 0, shorts2, 1, shortLen);
             assertArrayEquals("short array off len", eh, f.hashShorts(shorts2, 1, shortLen));
 
-
             char[] chars = new char[shortLen];
             bb.asCharBuffer().get(chars);
             assertArrayEquals("char array", eh, f.hashChars(chars));

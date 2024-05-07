@@ -182,7 +182,6 @@ class MurmurHash_3 {
         h1 = fmix64(h1);
         h2 = fmix64(h2);
 
-
         if (null != result) {
             h1 += h2;
             result[0] = h1;

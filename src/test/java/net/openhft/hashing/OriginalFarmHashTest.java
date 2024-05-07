@@ -133,7 +133,6 @@ public class OriginalFarmHashTest {
         return expectedIndex;
     }
 
-
     @Test
     public void testUoGo() {
         for (Object[] g : GOLDEN_64) {
@@ -1268,7 +1267,7 @@ public class OriginalFarmHashTest {
             4144237690L, 3350490823L,
             4166253320L, 2747410691L,
     };
-    
+
     static final long[] UO_EXPECTED = {
             3277735313L, 2681724312L,
             2598464059L, 797982799L,

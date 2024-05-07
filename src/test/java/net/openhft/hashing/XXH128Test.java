@@ -61,7 +61,6 @@ public class XXH128Test {
         LongHashFunctionTest.test(hl, data, hashesOfLoopingBytes[len][0]);
     }
 }
-
 /**
  * Test data is output of the following program with xxh3 implementation
  * from https://github.com/Cyan4973/xxHash
