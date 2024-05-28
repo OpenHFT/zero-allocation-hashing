@@ -320,7 +320,6 @@ class CityAndFarmHash_1_1 {
         return new AsLongHashFunctionSeeded(seed0, seed1);
     }
 
-
     // FarmHash
 
     private static <T> long naHashLen33To64(Access<T> access, T in, long off, long len) {

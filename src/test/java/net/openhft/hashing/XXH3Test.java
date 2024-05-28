@@ -52,7 +52,6 @@ public class XXH3Test {
         test(LongHashFunction.xx3(42L), XXH3Test_HASHES.HASHES_OF_LOOPING_BYTES_WITH_SEED_42);
     }
 
-
     public void test(LongHashFunction h, long[] hashesOfLoopingBytes) {
         byte[] data = new byte[len];
         for (int j = 0; j < data.length; j++) {
@@ -61,7 +60,6 @@ public class XXH3Test {
         LongHashFunctionTest.test(h, data, hashesOfLoopingBytes[len]);
     }
 }
-
 /**
  * Test data is output of the following program with xxh3 implementation
  * from https://github.com/Cyan4973/xxHash

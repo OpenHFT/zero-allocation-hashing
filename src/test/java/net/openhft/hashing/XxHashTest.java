@@ -48,7 +48,6 @@ public class XxHashTest {
         test(LongHashFunction.xx(42L), HASHES_OF_LOOPING_BYTES_WITH_SEED_42);
     }
 
-
     public void test(LongHashFunction city, long[] hashesOfLoopingBytes) {
         byte[] data = new byte[len];
         for (int j = 0; j < data.length; j++) {

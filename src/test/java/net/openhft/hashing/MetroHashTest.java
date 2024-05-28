@@ -22,7 +22,6 @@ public class MetroHashTest {
     @Parameterized.Parameter
     public int len;
 
-
     @Test
     public void testMetroWithoutSeeds() {
         test(LongHashFunction.metro(), HASHES_OF_LOOPING_BYTES_WITHOUT_SEED);
